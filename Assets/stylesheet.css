@@ -1,0 +1,8 @@
+header {
+  /* border: 3px solid red; */
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  background-color:blue;
+  color: white;
+}
