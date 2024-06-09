@@ -119,16 +119,9 @@ searchBtnEl.addEventListener("click", function(e) {
   }
 );
 
-function deleteExtras() {
+// function deleteExtras() {
 
-}
-  
-  // getAPI();
-  
-  // searchBtnEl.addEventListener("click", getAPI);
-  
-  // function getAPI2() {
-  //     const requestURL = `http://api.openweathermap.org/geo/1.0/direct?q=${cityname}&appid=${key}`;
-  //     console.log(requestURL);
+// }
+
   
     
