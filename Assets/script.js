@@ -24,7 +24,7 @@ function getAPI() {
 };
   
   function deleteExtras() {
-    cityName = cities.filter( (name, i) => !cities.includes(name, i + 1))
+    cityName = citiesName.filter( (name, i) => !citiesName.includes(name, i + 1))
     localStorage.setItem("cities", JSON.stringify(cityName))
     console.log(cityName)
   };
