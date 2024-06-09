@@ -59,13 +59,57 @@ function getAPI() {
 
   function populateWeatherData(){
     const weather = readLocalStorage();
-    const todayWeather = document.querySelector(".todays-weather");
+    const todaysWeather = document.querySelector(".todaysWeather");
 
     const city = document.createElement("h2");
     city.textContent = weather.city.name;
-    today
-  }
+    todaysWeather.appendChild(city);
 
+    const todaysDate = document.createElement("p");
+    todaysDate.textContent = dayjs.unix(weather.list[0].dt).format("MM/DD/YYYY");
+    today.appendChild(todaysDate);
+
+    const windSpeed = document.createElement("p");
+    temp.textContent = `Wind ${weather.list[0].main.temp}`;
+    today.appendChild(windSpeed);
+
+    const humidity = document.createElement("p");
+    humidity.textContent = `Humidity: ${weather.list[i].main.humidity}%`;
+    today.appendChild(humidity);
+
+    const today = document.createElement("p");
+    today.classList.add("weatherCards");
+
+    const temperature = document.createElement("p");
+    temperature.textContent = `Temp: ${weather.list[0].main.temp}`;
+    today.appendChild(temperature);
+
+
+  // get the 5 day forecast here
+  const weeklyForecast = document.querySelector(".weekly-forecast");
+
+  for (let i = 0; i < weather.list.length; i += 8){
+    const forecast = document.querySelector("weekly-forecast");
+    forecast.classList.add("weatherCards");
+
+    const date = document.createElement("p");
+    date.textContent = dayjs.unix(weather.list[i].dt + 86400).format("MM/DD/YYYY");
+    forecast.appendChild(date);
+
+    const wind = document.createElement("p");
+    wind.textContent = `Wind: ${weather.lsit[i].wind.speed} mph`;
+    forecast.appendChild(wind);
+
+    const humidity = document.createElement("p");
+    humidity.textContent = `Humidity: ${weather.list[i].main.humidity}%`;
+    forecast.appendChild(humidity);
+
+    const temperature = document.createElement("p");
+    temperature.textContent = `Temp: ${weather.list[i].main.temp}`;
+    forecast.appendChild(temperature);
+
+  }
+};
   
   
   
