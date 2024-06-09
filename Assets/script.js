@@ -9,7 +9,7 @@ const city = document.getElementById("searchCity");
 let citiesName = JSON.parse(localStorage.getItem("cityNames")) || [];
 
 function getAPI() {
-    const requestURL = `http://api.openweathermap.org/data/2.5/forecast?q=${city.value}&appid=${APIKEY}&units=imperial`;
+    const requestURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city.value}&appid=${APIKEY}&units=imperial`;
     console.log(requestURL);
     fetch (requestURL)
       .then(response => response.json())
