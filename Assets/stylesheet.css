@@ -6,3 +6,13 @@ header {
   background-color:blue;
   color: white;
 }
+
+.weatherCards {
+  border: 3px solid grey;
+  display: flex;
+  justify-content: space-between;
+}
+
+.days {
+  border: 3px solid grey;
+}
