@@ -14,5 +14,6 @@ header {
 }
 
 .days {
-  border: 3px solid grey;
+  background-color: black;
+  color: white;
 }
